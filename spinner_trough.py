@@ -45,7 +45,7 @@ class spinnner:
         """
         # Save reference to the QGIS interface
         self.iface = iface
-        self.widget = spinnnerDialog()
+        # self.widget = spinnnerDialog()
         # initialize plugin directory
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
@@ -196,7 +196,6 @@ class spinnner:
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
-            self.spinn
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
             pass
