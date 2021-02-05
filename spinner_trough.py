@@ -28,7 +28,7 @@ from qgis.PyQt.QtWidgets import QAction
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
-from .spinner_trough_dialog import spinnnerDialog
+from .spinner_trough_dialog import Ui_spinnnerDialogBase
 import os.path
 
 
@@ -188,7 +188,7 @@ class spinnner:
         # Only create GUI ONCE in callback, so that it will only load when the plugin is started
         if self.first_start == True:
             self.first_start = False
-            self.dlg = spinnnerDialog()
+            self.dlg = Ui_spinnnerDialogBase()
 
         # show the dialog
         self.dlg.show()
@@ -196,6 +196,12 @@ class spinnner:
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
+            self.dlg.spinBox.valueChanged.connect(self.update)
+            self.dlg.doubleSpinBox.valueChanged.connect(self.update)
+            self.dlg.mQgsSpinBox.valueChanged.connect(self.update)
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
-            pass
+            # pass
+
+    def update(self):
+        pass
