@@ -32,5 +32,5 @@ def classFactory(iface):  # pylint: disable=invalid-name
     :type iface: QgsInterface
     """
     #
-    from .spinner_trough import spinnner
-    return spinnner(iface)
+    from .spinner_trough import Spinnner
+    return Spinnner(iface)
