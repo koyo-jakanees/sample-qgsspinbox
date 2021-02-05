@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/spinner_trough" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
