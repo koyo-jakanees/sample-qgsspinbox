@@ -71,7 +71,7 @@ class MyDialog(QDialog):
         self.text_edit.setHtml(
             "<font color='grey' size='6'><green>PyQGIS PyQt!\nHello</font>")
         self.layout().addWidget(self.text_edit, 1, 0, -1, 1)
-        self.layout().addWidget(self.buttonbox, 0, 0, 2, 1)
+        self.layout().addWidget(self.buttonbox, 0, 0, 0, 1)
         self.layout().addWidget(self.bar_, 0, 0, 1, 1)
 
     def run(self):
