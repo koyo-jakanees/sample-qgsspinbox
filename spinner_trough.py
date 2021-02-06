@@ -115,9 +115,10 @@ class Spinnner:
         self.dlg.spinBox.valueChanged.connect(self.update)
         print(f'SpinBox connected: {str(self.dlg.spinBox.value())}')
         self.dlg.doubleSpinBox.valueChanged.connect(self.update)
-        print(f'SpinBox connected: {str(self.dlg.doubleSpinBox.value())}')
+        print(
+            f'doubleSpinBox connected: {str(self.dlg.doubleSpinBox.value())}')
         self.dlg.mQgsSpinBox.valueChanged.connect(self.update)
-        print(f'SpinBox connected: {str(self.dlg.mQgsSpinBox.value())}')
+        print(f'mQgsSpinBox connected: {str(self.dlg.mQgsSpinBox.value())}')
         self.menu = self.tr(u'&spinner')
 
         # Check if plugin was started the first time in current QGIS session
@@ -262,8 +263,8 @@ class Spinnner:
             self.mdlg = MyDialog()
             self.mdlg.text_edit.append(
                 f'<ol><li>SpinBox connected: {str(self.dlg.spinBox.value())}</li>\
-                <li> SpinBox connected: {str(self.dlg.doubleSpinBox.value())}</li>\
-                <li>SpinBox connected: {str(self.dlg.mQgsSpinBox.value())}</li></ol><br>')
+                <li> DoubleSpinBox connected: {str(self.dlg.doubleSpinBox.value())}</li>\
+                <li>mQgsSpinBox connected: {str(self.dlg.mQgsSpinBox.value())}</li></ol><br>')
             self.mdlg.show()
         # Do something useful here - delete the line containing pass and
         # substitute with your code.
