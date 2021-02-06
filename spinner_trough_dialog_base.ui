@@ -22,17 +22,37 @@
     </widget>
    </item>
    <item>
-    <widget class="QSpinBox" name="spinBox"/>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="suffix">
+      <string extracomment="Hours"> Hrs</string>
+     </property>
+     <property name="prefix">
+      <string/>
+     </property>
+     <property name="maximum">
+      <number>99</number>
+     </property>
+     <property name="stepType">
+      <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_2">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
      <property name="text">
       <string>QDoubleSpinBoxCount: </string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox">
+     <property name="suffix">
+      <string> Seconds</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="label_3">
@@ -42,7 +62,17 @@
     </widget>
    </item>
    <item>
-    <widget class="QgsSpinBox" name="mQgsSpinBox"/>
+    <widget class="QgsSpinBox" name="mQgsSpinBox">
+     <property name="wrapping">
+      <bool>true</bool>
+     </property>
+     <property name="displayIntegerBase">
+      <number>10</number>
+     </property>
+     <property name="clearValue">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="button_box">
